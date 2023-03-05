@@ -6,111 +6,8 @@
     <title>VirtuoStaff | Home</title>
     <link href="https://bootswatch.com/5/lux/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="assets/style/index.css" rel="stylesheet" />
     <link href="./favicon.ico" rel="shortcut icon" />
-
-    <style>
-        .header-div {
-            background-image: url("https://wallpapers.com/images/featured/7ws46k7xo1gcptjo.jpg");
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center center;
-        }
-
-        .header-div-card {
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-
-        .service-card {
-            border: none;
-        }
-
-        .row.equal-cols {
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        }
-  
-        .row.equal-cols:before, .row.equal-cols:after { display: block; }
-  
-        .row.equal-cols > [class*='col-'] {
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            margin-top: 22px;
-        }
-  
-        .row.equal-cols > [class*='col-'] > * {
-            -webkit-flex: 1 1 auto;
-            -ms-flex: 1 1 auto;
-            flex: 1 1 auto; 
-        }
-
-        .reveal {
-            position: relative;
-            opacity: 0;
-        }
-
-        .reveal.active {
-            opacity: 1;
-        }
-
-        .active.fade-bottom {
-            animation: fade-bottom 1s ease-in;
-        }
-
-        .active.fade-left {
-            animation: fade-left 1s ease-in;
-        }
-
-        .active.fade-right {
-            animation: fade-right 1s ease-in;
-        }
-
-        @keyframes fade-bottom {
-            0% {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fade-left {
-            0% {
-                transform: translateX(-100px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fade-right {
-            0% {
-                transform: translateX(100px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-    </style>
 </head>
 <body>
     <div align="center" class="header-div">
@@ -131,6 +28,7 @@
 
                     <br/><br/>
                     <button class="btn btn-secondary">Learn More</button>
+                    <br/><br/><br/>
                 </div>
             </div>
         </div>
@@ -143,8 +41,8 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#about-us"><i class="lni lni-vercel"></i><span style="margin-left: 12px;"></span>About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#solutions"><i class="lni lni-fireworks"></i><span style="margin-left: 12px;"></span>Solutions</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#about-us" id="about-us-nav"><i class="lni lni-vercel"></i><span style="margin-left: 12px;"></span>About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#solutions" id="solution-nav"><i class="lni lni-fireworks"></i><span style="margin-left: 12px;"></span>Solutions</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio"><i class="lni lni-vector"></i><span style="margin-left: 12px;"></span>Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team"><i class="lni lni-users"></i><span style="margin-left: 12px;"></span>Our Team</a></li>
                     </ul>
@@ -152,7 +50,7 @@
           </div>
     </nav>
 
-    <div class="container reveal fade-left">
+    <div class="container reveal fade-left" id="about-us">
         <br/><br/><br/>
     
         <div class="row">
@@ -170,7 +68,7 @@
         <br/><br/><br/>
     </div>
 
-    <div class="card card-body text-white bg-dark reveal fade-bottom">
+    <div class="card card-body text-white bg-dark reveal fade-bottom" id="solution">
         <div class="container">
             <br/><br/><br/>
             <h1>What We Offer?</h1>
@@ -184,9 +82,17 @@
                         <img class="card-img-top" src="assets/img/img-2.png" />
                         <div class="card-body">
                             <div class="card-body">
-                                <h3>Virtual Assistant</h3>
+                                <h3>Virtual Assistance</h3>
                                 <p>Our highly skilled virtual assistants can efficiently manage your day-to-day tasks, assist with administrative tasks, email management, scheduling appointments, and more. We also have virtual assistants who are experienced in the medical field that have been trained with HIPAA compliance.</p>
                             </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <center>
+                                <small class="text-muted">Starting from</small>
+                                <br/>
+                                <b class="fw-bold">$5 - $7 USD</b>
+                            </center>
                         </div>
                     </div>
                 </div>
@@ -200,6 +106,14 @@
                                 <p>Our team of digital marketing experts can help you manage your social media accounts, create videos, posts, and convert social media leads into sales. </p>
                             </div>
                         </div>
+
+                        <div class="card-footer">
+                            <center>
+                                <small class="text-muted">Starting from</small>
+                                <br/>
+                                <b class="fw-bold">$6 - $9 USD</b>
+                            </center>
+                        </div>
                     </div>
                 </div>
 
@@ -211,6 +125,14 @@
                                 <h3>Content Writer</h3>
                                 <p>Our skilled writers can create high-quality content for your website, blog, or social media channels. We strive to deliver engaging and informative content that will attract and retain customers.</p>
                             </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <center>
+                                <small class="text-muted">Starting from</small>
+                                <br/>
+                                <b class="fw-bold">$7 - $10 USD</b>
+                            </center>
                         </div>
                     </div>
                 </div>
@@ -227,6 +149,16 @@
                                 <p>Our experienced web developers can design and develop a website that meets your business requirements, using the latest technologies and tools to create responsive and user-friendly websites.</p>
                             </div>
                         </div>
+
+                        <div class="card-footer">
+                            <center>
+                                <small class="text-muted">Starting from</small>
+                                <br/>
+                                <b class="fw-bold">$600 USD</b>
+                                <br/>
+                                <small class="text-muted">(Project-based)</small>
+                            </center>
+                        </div>
                     </div>
                 </div>
 
@@ -239,6 +171,16 @@
                                 <p>Our experienced developers are ready to create your product-ready Android applications that can be used by thousands of users worldwide.</p>
                             </div>
                         </div>
+
+                        <div class="card-footer">
+                            <center>
+                                <small class="text-muted">Starting from</small>
+                                <br/>
+                                <b class="fw-bold">$900 USD</b>
+                                <br/>
+                                <small class="text-muted">(Project-based)</small>
+                            </center>
+                        </div>
                     </div>
                 </div>
 
@@ -246,10 +188,17 @@
                     <div class="card service-card">
                         <img class="card-img-top" src="assets/img/img-6.png" />
                         <div class="card-body">
-                            <div class="card-body">
-                                <h3>Physician Assistant</h3>
-                                <p>Our team of physician assistants can assist with medical tasks such as charting, patient education, and medication management. They are highly trained medical professionals who can work alongside physicians to provide quality patient care.</p>
-                            </div>
+                            <h3>Physician Assistance</h3>
+                            <p>Our team of physician assistants can assist with medical tasks such as charting, patient education, and medication management. They are highly trained medical professionals who can work alongside physicians to provide quality patient care.</p>
+                        </div>
+
+                        <div class="card-footer">
+                            <center>
+                                <small class="text-muted">Starting from</small>
+                                <br/>
+                                <b class="fw-bold">$10 - 12 USD</b>
+                                <br/><br/>
+                            </center>
                         </div>
                     </div>
                 </div>
@@ -339,6 +288,7 @@
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/jquery-migrate-3.0.0.min.js"></script>
     <script src="assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/isInViewport.js"></script>
     <script src="assets/scripts/pg-index.js"></script>
 </body>
 </html>
