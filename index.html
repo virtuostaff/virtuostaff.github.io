@@ -53,6 +53,63 @@
             -ms-flex: 1 1 auto;
             flex: 1 1 auto; 
         }
+
+        .reveal {
+            position: relative;
+            opacity: 0;
+        }
+
+        .reveal.active {
+            opacity: 1;
+        }
+
+        .active.fade-bottom {
+            animation: fade-bottom 1s ease-in;
+        }
+
+        .active.fade-left {
+            animation: fade-left 1s ease-in;
+        }
+
+        .active.fade-right {
+            animation: fade-right 1s ease-in;
+        }
+
+        @keyframes fade-bottom {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-left {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-right {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -95,7 +152,7 @@
           </div>
     </nav>
 
-    <div class="container">
+    <div class="container reveal fade-left">
         <br/><br/><br/>
     
         <div class="row">
@@ -113,8 +170,7 @@
         <br/><br/><br/>
     </div>
 
-        
-    <div class="card card-body text-white bg-primary">
+    <div class="card card-body text-white bg-dark reveal fade-bottom">
         <div class="container">
             <br/><br/><br/>
             <h1>What We Offer?</h1>
@@ -164,7 +220,7 @@
             <div class="row text-primary equal-cols">
                 <div class="col-lg-4">
                     <div class="card service-card">
-                        <img class="card-img-top" src="assets/img/img-4.png" />
+                        <img class="card-img-top" src="assets/img/img-7.png" />
                         <div class="card-body">
                             <div class="card-body">
                                 <h3>Web Development</h3>
@@ -222,7 +278,7 @@
         <br/><br/><br/>
     </div>
 
-    <div class="container">
+    <div class="container reveal fade-right">
         <br/><br/><br/>
 
         <div align="center">
@@ -283,5 +339,25 @@
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/jquery-migrate-3.0.0.min.js"></script>
     <script src="assets/scripts/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+    </script>
 </body>
 </html>
