@@ -1,5 +1,5 @@
 .header-div {
-    background-image: url("https://wallpapers.com/images/featured/7ws46k7xo1gcptjo.jpg");
+    background-image: url("../../assets/img/banner.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -76,6 +76,10 @@
     opacity: 1;
 }
 
+.active.fade-top {
+    animation: fade-top 1s ease-in;
+}
+
 .active.fade-bottom {
     animation: fade-bottom 1s ease-in;
 }
@@ -86,6 +90,18 @@
 
 .active.fade-right {
     animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes fade-bottom {
