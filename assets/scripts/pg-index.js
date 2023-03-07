@@ -1,4 +1,4 @@
-function reveal() {
+window.addEventListener("scroll", ()=> {
   var reveals = document.querySelectorAll(".reveal");
 
   for(var i = 0; i < reveals.length; i++) {
@@ -10,11 +10,9 @@ function reveal() {
       reveals[i].classList.add("active");
     else reveals[i].classList.remove("active");
   }
-}
+});
 
-window.addEventListener("scroll", reveal);
-
-let navs = ["solution", "about-us", "qualifications", "book"];
+let navs = ["solution", "about-us", "qualifications", "contact-us"];
 for(let nav of navs) {
   $("#" + nav).hover(()=> {
     $(".nav-link.active").removeClass("active");  
