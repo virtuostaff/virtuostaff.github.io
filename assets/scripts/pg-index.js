@@ -12,7 +12,7 @@ window.addEventListener("scroll", ()=> {
   }
 });
 
-let navs = ["solution", "about-us", "qualifications", "contact-us"];
+let navs = ["solutions", "about-us", "quality", "contact-us"];
 for(let nav of navs) {
   $("#" + nav).hover(()=> {
     $(".nav-link.active").removeClass("active");  
