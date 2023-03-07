@@ -14,7 +14,7 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-let navs = ["solution", "about-us", "portfolio", "our-team"];
+let navs = ["solution", "about-us", "qualifications", "book"];
 for(let nav of navs) {
   $("#" + nav).hover(()=> {
     $(".nav-link.active").removeClass("active");  
