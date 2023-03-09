@@ -83,19 +83,23 @@
 }
 
 .active.fade-top {
-    animation: fade-top 1s ease-in;
+    transition: all 1s ease-in-out;
+    animation: fade-top 1s ease-in-out;
 }
 
 .active.fade-bottom {
-    animation: fade-bottom 1s ease-in;
+    transition: all 1s ease-in-out;
+    animation: fade-bottom 1s ease-in-out;
 }
 
 .active.fade-left {
-    animation: fade-left 1s ease-in;
+    transition: all 1s ease-in-out;
+    animation: fade-left 1s ease-in-out;
 }
 
 .active.fade-right {
-    animation: fade-right 1s ease-in;
+    transition: all 1s ease-in-out;
+    animation: fade-right 1s ease-in-out;
 }
 
 @keyframes fade-top {
@@ -163,6 +167,11 @@
 
     .header-title {
         display: none;
+    }
+
+    #solutions row {
+        margin-left: 25px !important;
+        margin-right: 25px !important;
     }
 }
 
